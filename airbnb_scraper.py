@@ -5,14 +5,15 @@ from urllib.parse import quote
 import re
 from datetime import datetime, timedelta
 import random
+import sys
 
+# Seed the random number generator
 random.seed(time.time())
 
 def get_cheapest_accommodations(page, destination_city, specific_location_query, checkin, checkout, config, log_func):
     """
     Scrapes Airbnb using direct data extraction.
-    Tries to extract the TOTAL price and falls back to per-night calculation if needed.
-    Includes robust pop-up handling.
+    This version includes debugging logic to pause on an error.
     """
     encoded_query = quote(specific_location_query)
     search_url = f"https://www.airbnb.com/s/homes?query={encoded_query}&checkin={checkin}&checkout={checkout}&adults=2&room_types%5B%5D=Private%20room"
@@ -22,6 +23,7 @@ def get_cheapest_accommodations(page, destination_city, specific_location_query,
     try:
         page.goto(search_url, timeout=90000)
 
+        # Handle potential translation pop-up
         translation_close_button = page.locator('button[aria-label="Close"]')
         try:
             translation_close_button.wait_for(state='visible', timeout=5000)
@@ -32,7 +34,7 @@ def get_cheapest_accommodations(page, destination_city, specific_location_query,
             print("    - No translation pop-up found, continuing.")
 
         page.wait_for_selector('[data-testid="listing-card-title"]', timeout=60000)
-        time.sleep(random.uniform(2, 4)) 
+        time.sleep(random.uniform(2, 4))
 
     except Exception as e:
         print(f"      - ❌ ERROR: An exception occurred while loading the Airbnb search page. Error: {e}")
@@ -52,11 +54,11 @@ def get_cheapest_accommodations(page, destination_city, specific_location_query,
         num_nights_for_booking = 0
 
     for i, card in enumerate(listing_cards):
+        title = "Unknown Listing" # Define title with a default value
         try:
-            try:
-                title = card.locator('[data-testid="listing-card-name"]').inner_text(timeout=5000)
-            except Error:
-                title = "Unknown Listing"
+            # --- ACTION --- Announce what we're doing
+            title = card.locator('[data-testid="listing-card-name"]').inner_text(timeout=5000)
+            print(f"--> Processing card {i+1}: '{title}'")
 
             try:
                 link_suffix = card.locator('a').first.get_attribute('href')
@@ -65,43 +67,50 @@ def get_cheapest_accommodations(page, destination_city, specific_location_query,
                 full_link = "N/A"
 
             total_accommodation_cost = 0
-            try:
-                total_price_element = card.locator('xpath=//button//span[contains(text(), "total")]').first
-                total_price_text = total_price_element.inner_text(timeout=5000)
-                price_match = re.search(r'(\d[\d,.]*)', total_price_text)
-                if not price_match: raise ValueError("Total price text did not contain a number.")
-                total_accommodation_cost = int(float(price_match.group(1).replace(',', '')))
-            except (Error, ValueError):
-                try:
-                    price_element = card.locator("//span[contains(text(), 'night')]/preceding-sibling::span[last()]")
-                    price_text = price_element.inner_text(timeout=1000)
-                    price_match_fallback = re.search(r'(\d[\d,.]*)', price_text)
-                    if price_match_fallback:
-                        price_per_night_fallback = int(float(price_match_fallback.group(1).replace(',', '')))
-                        total_accommodation_cost = price_per_night_fallback * num_nights_for_booking if num_nights_for_booking > 0 else price_per_night_fallback
-                except Error:
-                    pass 
             
-            if total_accommodation_cost == 0:
-                print(f"      - Could not determine a valid total accommodation cost for '{title}'. Skipping this card.")
-                continue
+            # This selector is robust enough to handle regular and discounted price formats
+            price_summary_element = card.locator('span:has-text("for"):has-text("night")').first
+            price_summary_text = price_summary_element.inner_text(timeout=2000)
+            
+            price_match = re.search(r'(\d[\d,.]*)', price_summary_text)
+            if price_match:
+                total_accommodation_cost = int(float(price_match.group(1).replace(',', '')))
+            else:
+                raise ValueError("Price text found, but no number could be extracted.")
 
+            # --- RATING EXTRACTION (CORRECTED) ---
             rating_text = "N/A"
             try:
-                rating_element = card.locator('div.g1qv1ctd > div.t1a9j9y7')
-                if rating_element.is_visible(timeout=500):
-                    rating_span = rating_element.locator('span[aria-hidden="true"]')
-                    rating_text = rating_span.inner_text(timeout=500)
+                # Use a more specific container for the rating to be safe
+                rating_element_container = card.locator('div.t1a9j9y7').first
+                # The 'timeout' argument has been removed from is_visible()
+                if rating_element_container.is_visible():
+                    rating_text_full = rating_element_container.inner_text(timeout=500)
+                    rating_match = re.search(r'([\d.]+)', rating_text_full)
+                    if rating_match:
+                        rating_text = rating_match.group(1)
             except Error:
-                pass
+                pass # It's okay if rating isn't found
 
             scraped_accommodations.append({
                 "name": title, "total_accommodation_cost": total_accommodation_cost, "rating": rating_text,
                 "link": full_link, "checkin": checkin, "checkout": checkout})
+
         except Exception as e:
-            print(f"      - Could not process a listing card ({i+1}) due to unexpected error, skipping. Error: {e}")
-            continue
-        
+            # --- ERROR HANDLING --- This block runs when something in the 'try' block fails
+            print("\n----------------- ❌ ERROR ❌ -----------------")
+            print(f"The script failed while trying to extract data for: '{title}'")
+            print(f"Error Type: {type(e).__name__}, Message: {e}")
+            print("\n--- HTML of the failing card ---")
+            print(card.evaluate("node => node.outerHTML"))
+            print("-------------------------------------------------")
+            
+            # --- PAUSE --- This keeps the script and browser open until you press Enter
+            input("The browser is still open for inspection. Press Enter in this terminal to close the script.")
+            
+            # --- EXIT --- This stops the program
+            sys.exit(1)
+            
         time.sleep(random.uniform(0.5, 1.5))
 
     scraped_accommodations.sort(key=lambda x: x.get('total_accommodation_cost', float('inf')))
@@ -112,14 +121,14 @@ def get_cheapest_accommodations(page, destination_city, specific_location_query,
 def get_listing_calendar_availability(page: Page, listing_url: str, search_months: int = 6):
     """
     Navigates to a specific Airbnb listing page and scrapes its calendar for availability.
-    This version correctly scrapes only VISIBLE months to get an accurate date count.
     """
     print(f"    - Scraping calendar for listing: {listing_url}")
     availability_data = {}
     
-    try: 
+    try:
         page.goto(listing_url, timeout=90000)
         
+        # Handle potential translation pop-up
         translation_close_button = page.locator('button[aria-label="Close"]')
         try:
             translation_close_button.wait_for(state='visible', timeout=5000)
@@ -129,8 +138,9 @@ def get_listing_calendar_availability(page: Page, listing_url: str, search_month
         except Error:
             pass
 
-        time.sleep(random.uniform(2, 4)) 
+        time.sleep(random.uniform(2, 4))
 
+        # Try to open the calendar
         try:
             page.locator('[data-testid="change-dates-checkIn"]').click(timeout=3000)
             print("    - Clicked date input to ensure calendar is open.")
@@ -143,15 +153,13 @@ def get_listing_calendar_availability(page: Page, listing_url: str, search_month
         
         time.sleep(random.uniform(1, 2))
 
-        # --- CORRECTED CALENDAR SCRAPING LOGIC ---
+        # Scrape calendar data
         all_scraped_dates = set()
         for _ in range(search_months + 1):
             current_page_dates = set()
             
-            # THIS IS THE FIX: Only find day elements within VISIBLE month containers.
             visible_month_containers = page.locator('div[data-visible="true"]').all()
             if not visible_month_containers:
-                # Fallback to the whole page if the specific visible container isn't found
                 visible_month_containers = [page]
 
             day_elements = []
@@ -186,24 +194,25 @@ def get_listing_calendar_availability(page: Page, listing_url: str, search_month
             
             all_scraped_dates.update(current_page_dates)
 
+            # --- "NEXT MONTH" BUTTON (CORRECTED) ---
             try:
-                # This selector is based on the new HTML provided by the user.
                 next_button_selector = 'button[aria-label="Move forward to switch to the next month."]'
                 next_button = page.locator(next_button_selector)
 
-                if next_button.is_visible(timeout=1000):
+                # The 'timeout' argument is removed from is_visible()
+                if next_button.is_visible():
                     next_button.click()
-                    time.sleep(random.uniform(1, 2)) 
+                    time.sleep(random.uniform(1, 2))
                 else:
                     print("      - 'Next Month' button not visible. All visible months have been scraped.")
-                    break 
+                    break
             except Error:
                 print("      - Could not find or click 'Next Month' button. All visible months have been scraped.")
                 break
 
-    except Exception as e: 
-        print(f"    - ❌ ERROR scraping calendar for {listing_url}. Error: {e}")
-        return {} 
+    except Exception as e:
+        print(f"    - ❌ ERROR scraping calendar for {listing_url}. Error: {type(e).__name__}, {e}")
+        return {}
 
     print(f"    - Finished calendar scan for {listing_url}. Found {len(availability_data)} dates.")
     return availability_data
