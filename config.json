@@ -1,0 +1,158 @@
+{
+    "api_settings": {
+      "provider": "openrouter or deepseek",
+      "models": {
+        "openrouter": {
+          "default": "deepseek/deepseek-r1-0528:free"
+        },
+        "deepseek": {
+          "price_graph_model": "deepseek-coder",
+          "default": "deepseek-chat"
+        }
+      },
+      "keys": {
+        "openrouter_key": "key1,key2,key3",
+        "deepseek_key": "key1"
+      }
+    },
+    "search_parameters": {
+    "origin_city_id": "warsaw-poland",
+    "days_to_search": 20,
+    "start_date": "2025-07-25",
+    "max_trip_duration_days": 3,
+    "num_adults": 2,
+    "min_exploration_hours": 20,
+    "cookie_wait_seconds": 8,
+    "day_starts_at_hour": 8,
+    "day_ends_at_hour": 22,
+    "airport_buffer_hours": 2
+  },
+    "file_paths": {
+      "log_file": "run_log.txt",
+      "results_file": "final_trips.json"
+    },
+    "destinations": {
+      "austria": {
+        "enabled": 0,
+        "cities": {
+          "vienna-austria": "Vienna"
+        }
+      },
+      "belgium": {
+        "enabled": 0,
+        "cities": {
+          "brussels-belgium": "Brussels",
+          "charleroi-belgium": "Charleroi"
+        }
+      },
+      "croatia": {
+        "enabled": 0,
+        "cities": {
+          "zagreb-croatia": "Zagreb",
+          "split-croatia": "Split",
+          "dubrovnik-croatia": "Dubrovnik"
+        }
+      },
+      "czechia": {
+        "enabled": 0,
+        "cities": {
+          "prague-czechia": "Prague"
+        }
+      },
+      "denmark": {
+        "enabled": true,
+        "cities": {
+          "copenhagen-denmark": "Copenhagen",
+          "billund-denmark": "Billund"
+        }
+      },
+      "france": {
+        "enabled": true,
+        "cities": {
+          "paris-france": "Paris",
+          "nice-france": "Nice",
+          "marseille-france": "Marseille",
+          "lyon-france": "Lyon"
+        }
+      },
+      "germany": {
+        "enabled": 0,
+        "cities": {
+          "berlin-germany": "Berlin",
+          "munich-germany": "Munich",
+          "frankfurt-germany": "Frankfurt",
+          "hamburg-germany": "Hamburg"
+        }
+      },
+      "greece": {
+        "enabled": 0,
+        "cities": {
+          "athens-greece": "Athens",
+          "thessaloniki-greece": "Thessaloniki",
+          "heraklion-greece": "Heraklion (Crete)"
+        }
+      },
+      "hungary": {
+        "enabled": 0,
+        "cities": {
+          "budapest-hungary": "Budapest"
+        }
+      },
+      "italy": {
+        "enabled": true,
+        "cities": {
+          "rome-italy": "Rome",
+          "milan-italy": "Milan",
+          "venice-italy": "Venice",
+          "bologna-italy": "Bologna"
+        }
+      },
+      "netherlands": {
+        "enabled": 0,
+        "cities": {
+          "amsterdam-netherlands": "Amsterdam",
+          "eindhoven-netherlands": "Eindhoven"
+        }
+      },
+      "norway": {
+        "enabled": true,
+        "cities": {
+          "oslo-norway": "Oslo",
+          "bergen-norway": "Bergen"
+        }
+      },
+      "portugal": {
+        "enabled": true,
+        "cities": {
+          "lisbon-portugal": "Lisbon",
+          "porto-portugal": "Porto",
+          "faro-portugal": "Faro"
+        }
+      },
+      "spain": {
+        "enabled": true,
+        "cities": {
+          "madrid-spain": "Madrid",
+          "barcelona-spain": "Barcelona",
+          "palma-mallorca-spain": "Palma de Mallorca",
+          "malaga-spain": "Málaga"
+        }
+      },
+      "sweden": {
+        "enabled": true,
+        "cities": {
+          "stockholm-sweden": "Stockholm",
+          "gothenburg-sweden": "Gothenburg"
+        }
+      },
+      "switzerland": {
+        "enabled": 0,
+        "cities": {
+          "zurich-switzerland": "Zürich",
+          "geneva-switzerland": "Geneva",
+          "basel-switzerland": "Basel"
+        }
+      }
+    }
+  }
+  
