@@ -1,0 +1,1067 @@
+{
+  "Zagreb": [
+    {
+      "destination": "Zagreb",
+      "outbound_date": "2025-06-26",
+      "return_date": "2025-06-28",
+      "total_cost": 1170,
+      "cost_per_hour_of_exploration": 56.39,
+      "exploration_hours": 20.75,
+      "flights": {
+        "total_price": 772,
+        "outbound": {
+          "departure_time": "20:30",
+          "arrival_time": "11:45+1",
+          "duration": "15h 15m",
+          "airline_names": [
+            "Ryanair"
+          ],
+          "price": 346,
+          "stops": "1 stop · Pisa"
+        },
+        "return": {
+          "departure_time": "10:30",
+          "arrival_time": "21:45",
+          "duration": "11h 15m",
+          "airline_names": [],
+          "price": 426,
+          "stops": "1 stop · Rome"
+        }
+      },
+      "accommodation": {
+        "name": "Your Private Room - Peacefull Oasis in Zagreb",
+        "price_per_night": 199,
+        "rating": "4.9 (172)",
+        "link": "https://www.airbnb.com/rooms/22219200?adults=2&check_in=2025-06-26&check_out=2025-06-28&search_mode=regular_search&category_tag=Tag%3A8678&photo_id=946810704&source_impression_id=p3_1750247102_P3UhHPEHPr7Bm0RX&previous_page_section_name=1000&federated_search_id=0c634739-10a5-46f5-8c01-7420ca1a7761",
+        "calculated_total_price": 398
+      }
+    },
+    {
+      "destination": "Zagreb",
+      "outbound_date": "2025-07-02",
+      "return_date": "2025-07-05",
+      "total_cost": 1396,
+      "cost_per_hour_of_exploration": 38.51,
+      "exploration_hours": 36.25,
+      "flights": {
+        "total_price": 784,
+        "outbound": {
+          "departure_time": "12:45",
+          "arrival_time": "18:55",
+          "duration": "6h 10m",
+          "airline_names": [
+            "Ryanair"
+          ],
+          "price": 418,
+          "stops": "1 stop · Brussels"
+        },
+        "return": {
+          "departure_time": "20:10",
+          "arrival_time": "08:10+1",
+          "duration": "12h",
+          "airline_names": [
+            "Ryanair"
+          ],
+          "price": 366,
+          "stops": "1 stop · Airport change · Milan"
+        }
+      },
+      "accommodation": {
+        "name": "The Golden ROOM In The Center Of Zagreb - II",
+        "price_per_night": 204,
+        "rating": "4.77 (267)",
+        "link": "https://www.airbnb.com/rooms/39980153?adults=2&check_in=2025-07-02&check_out=2025-07-04&search_mode=regular_search&category_tag=Tag%3A8678&children=0&infants=0&pets=0&photo_id=2116560103&source_impression_id=p3_1750247162_P3GYYOmAVc4dE9gz&previous_page_section_name=1000&federated_search_id=d64bcae0-f717-4792-833e-a24485d7190a",
+        "calculated_total_price": 612
+      }
+    },
+    {
+      "destination": "Zagreb",
+      "outbound_date": "2025-06-30",
+      "return_date": "2025-07-03",
+      "total_cost": 1515,
+      "cost_per_hour_of_exploration": 43.29,
+      "exploration_hours": 35.0,
+      "flights": {
+        "total_price": 903,
+        "outbound": {
+          "departure_time": "20:25",
+          "arrival_time": "10:00+1",
+          "duration": "13h 35m",
+          "airline_names": [
+            "Ryanair"
+          ],
+          "price": 497,
+          "stops": "1 stop · Brussels"
+        },
+        "return": {
+          "departure_time": "06:00",
+          "arrival_time": "19:20",
+          "duration": "13h 20m",
+          "airline_names": [
+            "Ryanair"
+          ],
+          "price": 406,
+          "stops": "1 stop · Naples"
+        }
+      },
+      "accommodation": {
+        "name": "The Golden ROOM In The Center Of Zagreb - II",
+        "price_per_night": 204,
+        "rating": "4.77 (267)",
+        "link": "https://www.airbnb.com/rooms/39980153?adults=2&check_in=2025-07-01&check_out=2025-07-03&search_mode=regular_search&category_tag=Tag%3A8678&children=0&infants=0&pets=0&photo_id=2116560103&source_impression_id=p3_1750247205_P38loF693PQw7TWy&previous_page_section_name=1000&federated_search_id=347fe105-ac10-4fd3-825b-8c11db6e455d",
+        "calculated_total_price": 612
+      }
+    }
+  ],
+  "Riga": [
+    {
+      "destination": "Riga",
+      "outbound_date": "2025-06-29",
+      "return_date": "2025-07-03",
+      "total_cost": 1344,
+      "cost_per_hour_of_exploration": 26.44,
+      "exploration_hours": 50.83,
+      "flights": {
+        "total_price": 964,
+        "outbound": {
+          "departure_time": "06:10",
+          "arrival_time": "16:35",
+          "duration": "9h 25m",
+          "airline_names": [],
+          "price": 588,
+          "stops": "1 stop · Stockholm"
+        },
+        "return": {
+          "departure_time": "19:25",
+          "arrival_time": "06:30+1",
+          "duration": "12h 05m",
+          "airline_names": [
+            "Ryanair"
+          ],
+          "price": 376,
+          "stops": "1 stop · Kraków"
+        }
+      },
+      "accommodation": {
+        "name": "A Room for One—Just Pause.",
+        "price_per_night": 95,
+        "rating": "4.73 (11)",
+        "link": "https://www.airbnb.com/rooms/1038449473035347811?adults=2&check_in=2025-06-29&check_out=2025-07-03&search_mode=regular_search&category_tag=Tag%3A8678&photo_id=1795241848&source_impression_id=p3_1750247408_P35dAqRgutEQExAs&previous_page_section_name=1000&federated_search_id=b0948387-5e98-43f2-b123-e0fcd4b6686a",
+        "calculated_total_price": 380
+      }
+    },
+    {
+      "destination": "Riga",
+      "outbound_date": "2025-06-26",
+      "return_date": "2025-06-30",
+      "total_cost": 1364,
+      "cost_per_hour_of_exploration": 31.97,
+      "exploration_hours": 42.67,
+      "flights": {
+        "total_price": 988,
+        "outbound": {
+          "departure_time": "13:20",
+          "arrival_time": "19:00",
+          "duration": "4h 40m",
+          "airline_names": [
+            "Ryanair"
+          ],
+          "price": 571,
+          "stops": "1 stop · Kraków"
+        },
+        "return": {
+          "departure_time": "13:40",
+          "arrival_time": "22:20",
+          "duration": "9h 40m",
+          "airline_names": [
+            "Ryanair"
+          ],
+          "price": 417,
+          "stops": "1 stop · Kraków"
+        }
+      },
+      "accommodation": {
+        "name": "A Room for One—Just Pause.",
+        "price_per_night": 94,
+        "rating": "4.73 (11)",
+        "link": "https://www.airbnb.com/rooms/1038449473035347811?adults=2&check_in=2025-06-26&check_out=2025-06-30&search_mode=regular_search&category_tag=Tag%3A8678&photo_id=1795241848&source_impression_id=p3_1750247462_P3Vtd-DSllBnf0pS&previous_page_section_name=1000&federated_search_id=a101430f-16ca-41a7-912c-202c4b922fec",
+        "calculated_total_price": 376
+      }
+    },
+    {
+      "destination": "Riga",
+      "outbound_date": "2025-06-25",
+      "return_date": "2025-06-30",
+      "total_cost": 1734,
+      "cost_per_hour_of_exploration": 28.23,
+      "exploration_hours": 61.42,
+      "flights": {
+        "total_price": 1264,
+        "outbound": {
+          "departure_time": "10:55",
+          "arrival_time": "13:15",
+          "duration": "1h 20m",
+          "airline_names": [],
+          "price": 847,
+          "stops": "Direct"
+        },
+        "return": {
+          "departure_time": "13:40",
+          "arrival_time": "22:20",
+          "duration": "9h 40m",
+          "airline_names": [],
+          "price": 417,
+          "stops": "1 stop · Kraków"
+        }
+      },
+      "accommodation": {
+        "name": "A Room for One—Just Pause.",
+        "price_per_night": 94,
+        "rating": "4.73 (11)",
+        "link": "https://www.airbnb.com/rooms/1038449473035347811?adults=2&check_in=2025-06-25&check_out=2025-06-30&search_mode=regular_search&category_tag=Tag%3A8678&photo_id=1795241848&source_impression_id=p3_1750247528_P3jic78TJjWlDJ4f&previous_page_section_name=1000&federated_search_id=480a7776-b3fe-458c-9918-738a49efd69a",
+        "calculated_total_price": 470
+      }
+    }
+  ],
+  "Vilnius": [
+    {
+      "destination": "Vilnius",
+      "outbound_date": "2025-06-27",
+      "return_date": "2025-06-29",
+      "total_cost": 1307,
+      "cost_per_hour_of_exploration": 41.39,
+      "exploration_hours": 31.58,
+      "flights": {
+        "total_price": 1001,
+        "outbound": {
+          "departure_time": "08:00",
+          "arrival_time": "10:05",
+          "duration": "1h 05m",
+          "airline_names": [],
+          "price": 599,
+          "stops": "Direct"
+        },
+        "return": {
+          "departure_time": "19:40",
+          "arrival_time": "08:10+1",
+          "duration": "13h 30m",
+          "airline_names": [],
+          "price": 402,
+          "stops": "1 stop · Milan"
+        }
+      },
+      "accommodation": {
+        "name": "Peaceful room, great location!",
+        "price_per_night": 153,
+        "rating": "N/A",
+        "link": "https://www.airbnb.com/rooms/1340853476799740194?adults=2&check_in=2025-06-27&check_out=2025-06-29&search_mode=regular_search&category_tag=Tag%3A8678&photo_id=2075166951&source_impression_id=p3_1750248120_P3OQwAmjzW1RvNMc&previous_page_section_name=1000&federated_search_id=a09368bc-f0cb-4fd8-bdbb-82157624f30c",
+        "calculated_total_price": 306
+      }
+    },
+    {
+      "destination": "Vilnius",
+      "outbound_date": "2025-07-01",
+      "return_date": "2025-07-04",
+      "total_cost": 1503,
+      "cost_per_hour_of_exploration": 35.51,
+      "exploration_hours": 42.33,
+      "flights": {
+        "total_price": 1047,
+        "outbound": {
+          "departure_time": "13:55",
+          "arrival_time": "10:40+1",
+          "duration": "19h 45m",
+          "airline_names": [
+            "Ryanair"
+          ],
+          "price": 477,
+          "stops": "1 stop · Budapest"
+        },
+        "return": {
+          "departure_time": "18:00",
+          "arrival_time": "01:15+1",
+          "duration": "8h 15m",
+          "airline_names": [
+            "Bergamolynk services",
+            "Ryanair"
+          ],
+          "price": 570,
+          "stops": "1 stop · Milan"
+        }
+      },
+      "accommodation": {
+        "name": "Peaceful room, great location!",
+        "price_per_night": 152,
+        "rating": "N/A",
+        "link": "https://www.airbnb.com/rooms/1340853476799740194?adults=2&check_in=2025-07-01&check_out=2025-07-04&search_mode=regular_search&category_tag=Tag%3A8678&photo_id=2075166951&source_impression_id=p3_1750248899_P3DeEnYVb1C-YTsa&previous_page_section_name=1000&federated_search_id=4c215cc9-48cb-40ff-bfb4-80ed51f56254",
+        "calculated_total_price": 456
+      }
+    },
+    {
+      "destination": "Vilnius",
+      "outbound_date": "2025-06-26",
+      "return_date": "2025-06-29",
+      "total_cost": 1633,
+      "cost_per_hour_of_exploration": 54.89,
+      "exploration_hours": 29.75,
+      "flights": {
+        "total_price": 1177,
+        "outbound": {
+          "departure_time": "06:10",
+          "arrival_time": "21:00",
+          "duration": "13h 50m",
+          "airline_names": [],
+          "price": 534,
+          "stops": "1 stop · Stockholm"
+        },
+        "return": {
+          "departure_time": "13:45",
+          "arrival_time": "20:45",
+          "duration": "8h",
+          "airline_names": [
+            "Ryanair"
+          ],
+          "price": 643,
+          "stops": "1 stop · Vienna"
+        }
+      },
+      "accommodation": {
+        "name": "Peaceful room, great location!",
+        "price_per_night": 152,
+        "rating": "N/A",
+        "link": "https://www.airbnb.com/rooms/1340853476799740194?adults=2&check_in=2025-06-26&check_out=2025-06-29&search_mode=regular_search&category_tag=Tag%3A8678&photo_id=2075166951&source_impression_id=p3_1750248297_P3aiEpKCKfjf_zYe&previous_page_section_name=1000&federated_search_id=ff997e92-bccb-47cc-be7a-b5c5458f11f6",
+        "calculated_total_price": 456
+      }
+    }
+  ],
+  "Bratislava": [
+    {
+      "destination": "Bratislava",
+      "outbound_date": "2025-06-23",
+      "return_date": "2025-06-27",
+      "total_cost": 1377,
+      "cost_per_hour_of_exploration": 34.28,
+      "exploration_hours": 40.17,
+      "flights": {
+        "total_price": 725,
+        "outbound": {
+          "departure_time": "06:20",
+          "arrival_time": "21:50",
+          "duration": "15h 30m",
+          "airline_names": [
+            "Ryanair"
+          ],
+          "price": 378,
+          "stops": "1 stop · Airport change · Milan"
+        },
+        "return": {
+          "departure_time": "11:10",
+          "arrival_time": "01:15+1",
+          "duration": "14h 05m",
+          "airline_names": [
+            "Ryanair"
+          ],
+          "price": 347,
+          "stops": "1 stop · Airport change · Milan"
+        }
+      },
+      "accommodation": {
+        "name": "Nice light room for your stay",
+        "price_per_night": 163,
+        "rating": "N/A",
+        "link": "https://www.airbnb.com/rooms/1141437120372903215?adults=2&check_in=2025-06-23&check_out=2025-06-27&search_mode=regular_search&category_tag=Tag%3A8678&photo_id=1890987699&source_impression_id=p3_1750254319_P3Q3crsWzsQpCNwc&previous_page_section_name=1000&federated_search_id=bb770973-228e-4dc6-95d1-40b7757531ed",
+        "calculated_total_price": 652
+      }
+    },
+    {
+      "destination": "Bratislava",
+      "outbound_date": "2025-06-27",
+      "return_date": "2025-06-30",
+      "total_cost": 1417,
+      "cost_per_hour_of_exploration": 33.4,
+      "exploration_hours": 42.42,
+      "flights": {
+        "total_price": 835,
+        "outbound": {
+          "departure_time": "08:35",
+          "arrival_time": "14:50",
+          "duration": "6h 15m",
+          "airline_names": [
+            "Ryanair"
+          ],
+          "price": 503,
+          "stops": "1 stop · Milan"
+        },
+        "return": {
+          "departure_time": "22:15",
+          "arrival_time": "08:40+1",
+          "duration": "10h 25m",
+          "airline_names": [
+            "Ryanair"
+          ],
+          "price": 332,
+          "stops": "1 stop · Milan"
+        }
+      },
+      "accommodation": {
+        "name": "Normal room 4 two",
+        "price_per_night": 194,
+        "rating": "4.53 (129)",
+        "link": "https://www.airbnb.com/rooms/8862314?adults=2&check_in=2025-06-27&check_out=2025-06-30&search_mode=regular_search&category_tag=Tag%3A8678&photo_id=746362120&source_impression_id=p3_1750254489_P3CA5yxIR-tiuhYe&previous_page_section_name=1000&federated_search_id=dbf3d023-aeab-4366-8456-c282073ce9f8",
+        "calculated_total_price": 582
+      }
+    },
+    {
+      "destination": "Bratislava",
+      "outbound_date": "2025-06-23",
+      "return_date": "2025-06-28",
+      "total_cost": 1897,
+      "cost_per_hour_of_exploration": 36.48,
+      "exploration_hours": 52,
+      "flights": {
+        "total_price": 1082,
+        "outbound": {
+          "departure_time": "06:20",
+          "arrival_time": "21:50",
+          "duration": "15h 30m",
+          "airline_names": [],
+          "price": 378,
+          "stops": "1 stop · Airport change · Milan"
+        },
+        "return": {
+          "departure_time": "09:25",
+          "arrival_time": "18:30",
+          "duration": "9h 05m",
+          "airline_names": [],
+          "price": 704,
+          "stops": "1 stop · London"
+        }
+      },
+      "accommodation": {
+        "name": "Nice light room for your stay",
+        "price_per_night": 163,
+        "rating": "N/A",
+        "link": "https://www.airbnb.com/rooms/1141437120372903215?adults=2&check_in=2025-06-23&check_out=2025-06-28&search_mode=regular_search&category_tag=Tag%3A8678&photo_id=1890987699&source_impression_id=p3_1750254409_P3DMQsQhnUqzFDlx&previous_page_section_name=1000&federated_search_id=7cfd3b22-a0d0-4cba-926f-7fbba1921ad1",
+        "calculated_total_price": 815
+      }
+    }
+  ],
+  "Prague": [
+    {
+      "destination": "Prague",
+      "outbound_date": "2025-07-03",
+      "return_date": "2025-07-05",
+      "total_cost": 1214,
+      "cost_per_hour_of_exploration": 43.23,
+      "exploration_hours": 28.08,
+      "flights": {
+        "total_price": 864,
+        "outbound": {
+          "departure_time": "22:30",
+          "arrival_time": "07:50+1",
+          "duration": "9h 20m",
+          "airline_names": [
+            "Ryanair"
+          ],
+          "price": 394,
+          "stops": "1 stop · Airport change · Rome"
+        },
+        "return": {
+          "departure_time": "13:55",
+          "arrival_time": "19:15",
+          "duration": "5h 20m",
+          "airline_names": [
+            "Ryanair"
+          ],
+          "price": 470,
+          "stops": "1 stop · Kraków"
+        }
+      },
+      "accommodation": {
+        "name": "Room Close to Charles Bridge2( read description)",
+        "price_per_night": 175,
+        "rating": "4.41 (125)",
+        "link": "https://www.airbnb.com/rooms/926112632916089589?adults=2&check_in=2025-07-03&check_out=2025-07-05&search_mode=regular_search&category_tag=Tag%3A8678&photo_id=1687951509&source_impression_id=p3_1750254773_P3K7TFTaLvDQhZhw&previous_page_section_name=1000&federated_search_id=4f1c8d65-d7cc-47f4-b265-98fbc1448b5e",
+        "calculated_total_price": 350
+      }
+    },
+    {
+      "destination": "Prague",
+      "outbound_date": "2025-07-03",
+      "return_date": "2025-07-06",
+      "total_cost": 1239,
+      "cost_per_hour_of_exploration": 26.36,
+      "exploration_hours": 47.0,
+      "flights": {
+        "total_price": 693,
+        "outbound": {
+          "departure_time": "22:30",
+          "arrival_time": "08:35+1",
+          "duration": "10h 05m",
+          "airline_names": [],
+          "price": 314,
+          "stops": "1 stop · Rome"
+        },
+        "return": {
+          "departure_time": "20:35",
+          "arrival_time": "08:05+1",
+          "duration": "11h 30m",
+          "airline_names": [
+            "Ryanair"
+          ],
+          "price": 379,
+          "stops": "1 stop · Airport change · Venice"
+        }
+      },
+      "accommodation": {
+        "name": "Spacious Room in City Center",
+        "price_per_night": 182,
+        "rating": "4.63 (123)",
+        "link": "https://www.airbnb.com/rooms/917855517981700550?adults=2&check_in=2025-07-02&check_out=2025-07-04&search_mode=regular_search&category_tag=Tag%3A8678&children=0&infants=0&pets=0&photo_id=1679226814&source_impression_id=p3_1750254719_P3LKEVaNMacZrP7W&previous_page_section_name=1000&federated_search_id=cbdf0b7d-b60d-42c2-9880-6146b64035b6",
+        "calculated_total_price": 546
+      }
+    },
+    {
+      "destination": "Prague",
+      "outbound_date": "2025-07-02",
+      "return_date": "2025-07-06",
+      "total_cost": 1500,
+      "cost_per_hour_of_exploration": 29.17,
+      "exploration_hours": 51.42,
+      "flights": {
+        "total_price": 792,
+        "outbound": {
+          "departure_time": "11:15",
+          "arrival_time": "17:10",
+          "duration": "5h 55m",
+          "airline_names": [
+            "Ryanair"
+          ],
+          "price": 413,
+          "stops": "1 stop · Venice"
+        },
+        "return": {
+          "departure_time": "20:35",
+          "arrival_time": "08:05+1",
+          "duration": "11h 30m",
+          "airline_names": [
+            "Ryanair"
+          ],
+          "price": 379,
+          "stops": "1 stop · Airport change · Venice"
+        }
+      },
+      "accommodation": {
+        "name": "Nice & quiet place",
+        "price_per_night": 177,
+        "rating": "4.86 (271)",
+        "link": "https://www.airbnb.com/rooms/15547557?adults=2&check_in=2025-07-02&check_out=2025-07-06&search_mode=regular_search&category_tag=Tag%3A8678&photo_id=597307305&source_impression_id=p3_1750254833_P3ahr6dokAd5NzqK&previous_page_section_name=1000&federated_search_id=4afc0bad-76f2-4245-b8ee-6269629e9a66",
+        "calculated_total_price": 708
+      }
+    }
+  ],
+  "Athens": [
+    {
+      "destination": "Athens",
+      "outbound_date": "2025-06-22",
+      "return_date": "2025-06-26",
+      "total_cost": 1318,
+      "cost_per_hour_of_exploration": 33.37,
+      "exploration_hours": 39.5,
+      "flights": {
+        "total_price": 822,
+        "outbound": {
+          "departure_time": "18:40",
+          "arrival_time": "22:10",
+          "duration": "2h 30m",
+          "airline_names": [],
+          "price": 456,
+          "stops": "Direct"
+        },
+        "return": {
+          "departure_time": "10:30",
+          "arrival_time": "12:05",
+          "duration": "2h 35m",
+          "airline_names": [],
+          "price": 366,
+          "stops": "Direct"
+        }
+      },
+      "accommodation": {
+        "name": "The rose Paris",
+        "price_per_night": 124,
+        "rating": "4.75 (259)",
+        "link": "https://www.airbnb.com/rooms/15349913?adults=2&check_in=2025-06-22&check_out=2025-06-26&search_mode=regular_search&category_tag=Tag%3A8678&photo_id=239459313&source_impression_id=p3_1750255286_P3hrdaqQD_A4iJuf&previous_page_section_name=1000&federated_search_id=84a83713-4315-435c-bff1-1e1f44eba001",
+        "calculated_total_price": 496
+      }
+    },
+    {
+      "destination": "Athens",
+      "outbound_date": "2025-06-21",
+      "return_date": "2025-06-26",
+      "total_cost": 1652,
+      "cost_per_hour_of_exploration": 29.59,
+      "exploration_hours": 55.83,
+      "flights": {
+        "total_price": 1052,
+        "outbound": {
+          "departure_time": "06:50",
+          "arrival_time": "15:40",
+          "duration": "7h 50m",
+          "airline_names": [
+            "Ryanair"
+          ],
+          "price": 686,
+          "stops": "2 stops · Budapest, Belgrade"
+        },
+        "return": {
+          "departure_time": "10:30",
+          "arrival_time": "12:05",
+          "duration": "2h 35m",
+          "airline_names": [],
+          "price": 366,
+          "stops": "Direct"
+        }
+      },
+      "accommodation": {
+        "name": "The rose Paris",
+        "price_per_night": 120,
+        "rating": "4.75 (259)",
+        "link": "https://www.airbnb.com/rooms/15349913?adults=2&check_in=2025-06-22&check_out=2025-06-27&search_mode=regular_search&category_tag=Tag%3A8678&children=0&infants=0&pets=0&photo_id=239459313&source_impression_id=p3_1750255348_P3rn8INFcwJNmpk6&previous_page_section_name=1000&federated_search_id=fc93010e-a8cd-4a7c-9399-f7779402040a",
+        "calculated_total_price": 600
+      }
+    },
+    {
+      "destination": "Athens",
+      "outbound_date": "2025-06-22",
+      "return_date": "2025-06-27",
+      "total_cost": 1731,
+      "cost_per_hour_of_exploration": 33.29,
+      "exploration_hours": 52,
+      "flights": {
+        "total_price": 1131,
+        "outbound": {
+          "departure_time": "18:40",
+          "arrival_time": "22:10",
+          "duration": "2h 30m",
+          "airline_names": [],
+          "price": 456,
+          "stops": "Direct"
+        },
+        "return": {
+          "departure_time": "06:05",
+          "arrival_time": "11:10",
+          "duration": "6h 05m",
+          "airline_names": [],
+          "price": 675,
+          "stops": "1 stop · Rome"
+        }
+      },
+      "accommodation": {
+        "name": "The rose Paris",
+        "price_per_night": 120,
+        "rating": "4.75 (259)",
+        "link": "https://www.airbnb.com/rooms/15349913?adults=2&check_in=2025-06-22&check_out=2025-06-27&search_mode=regular_search&category_tag=Tag%3A8678&photo_id=239459313&source_impression_id=p3_1750255475_P3eo6TkS4GvO-f7A&previous_page_section_name=1000&federated_search_id=fe5bcafa-9c3d-41f1-a48a-e1aca93b0fad",
+        "calculated_total_price": 600
+      }
+    }
+  ],
+  "Tallinn": [
+    {
+      "destination": "Tallinn",
+      "outbound_date": "2025-07-02",
+      "return_date": "2025-07-04",
+      "total_cost": 1203,
+      "cost_per_hour_of_exploration": 67.13,
+      "exploration_hours": 17.92,
+      "flights": {
+        "total_price": 869,
+        "outbound": {
+          "departure_time": "05:45",
+          "arrival_time": "14:05",
+          "duration": "7h 20m",
+          "airline_names": [],
+          "price": 452,
+          "stops": "1 stop · Airport change · Stockholm"
+        },
+        "return": {
+          "departure_time": "10:00",
+          "arrival_time": "18:25",
+          "duration": "8h 25m",
+          "airline_names": [],
+          "price": 417,
+          "stops": "1 stop · Helsinki"
+        }
+      },
+      "accommodation": {
+        "name": "Cozy private room with balcony in central city",
+        "price_per_night": 167,
+        "rating": "4.91 (630)",
+        "link": "https://www.airbnb.com/rooms/16922046?adults=2&check_in=2025-07-02&check_out=2025-07-04&search_mode=regular_search&category_tag=Tag%3A8678&photo_id=669199012&source_impression_id=p3_1750255686_P3eg2EBokDD4-Ass&previous_page_section_name=1000&federated_search_id=0e5a5000-6af3-4c78-b10f-78c4abba6546",
+        "calculated_total_price": 334
+      }
+    },
+    {
+      "destination": "Tallinn",
+      "outbound_date": "2025-07-02",
+      "return_date": "2025-07-05",
+      "total_cost": 1337,
+      "cost_per_hour_of_exploration": 43.24,
+      "exploration_hours": 30.92,
+      "flights": {
+        "total_price": 908,
+        "outbound": {
+          "departure_time": "05:45",
+          "arrival_time": "14:05",
+          "duration": "7h 20m",
+          "airline_names": [],
+          "price": 452,
+          "stops": "1 stop · Airport change · Stockholm"
+        },
+        "return": {
+          "departure_time": "06:00",
+          "arrival_time": "08:10",
+          "duration": "3h 10m",
+          "airline_names": [],
+          "price": 456,
+          "stops": "1 stop · Helsinki"
+        }
+      },
+      "accommodation": {
+        "name": "Cozy private room near bus station/airport/2 parks",
+        "price_per_night": 143,
+        "rating": "4.77 (182)",
+        "link": "https://www.airbnb.com/rooms/50374869?adults=2&check_in=2025-06-30&check_out=2025-07-03&search_mode=regular_search&category_tag=Tag%3A8678&children=0&infants=0&pets=0&photo_id=1198205460&source_impression_id=p3_1750255740_P3w11moCKehtri3j&previous_page_section_name=1000&federated_search_id=41295e8e-4bf0-4e2c-adec-952df08442f6",
+        "calculated_total_price": 429
+      }
+    },
+    {
+      "destination": "Tallinn",
+      "outbound_date": "2025-07-01",
+      "return_date": "2025-07-04",
+      "total_cost": 1341,
+      "cost_per_hour_of_exploration": 43.37,
+      "exploration_hours": 30.92,
+      "flights": {
+        "total_price": 921,
+        "outbound": {
+          "departure_time": "19:00",
+          "arrival_time": "14:05+1",
+          "duration": "18h 05m",
+          "airline_names": [],
+          "price": 525,
+          "stops": "1 stop · Airport change · Stockholm"
+        },
+        "return": {
+          "departure_time": "10:00",
+          "arrival_time": "18:25",
+          "duration": "9h 25m",
+          "airline_names": [],
+          "price": 396,
+          "stops": "1 stop · Helsinki"
+        }
+      },
+      "accommodation": {
+        "name": "Cozy private room near bus station/airport/2 parks",
+        "price_per_night": 140,
+        "rating": "4.77 (182)",
+        "link": "https://www.airbnb.com/rooms/50374869?adults=2&check_in=2025-06-30&check_out=2025-07-02&search_mode=regular_search&category_tag=Tag%3A8678&children=0&infants=0&pets=0&photo_id=1198205460&source_impression_id=p3_1750255804_P3bf9W7DppUSfk3m&previous_page_section_name=1000&federated_search_id=d4916966-7c8c-48ed-bcae-5f2e8bd5fb37",
+        "calculated_total_price": 420
+      }
+    }
+  ],
+  "Ljubljana": [
+    {
+      "destination": "Ljubljana",
+      "outbound_date": "2025-06-24",
+      "return_date": "2025-06-27",
+      "total_cost": 2196,
+      "cost_per_hour_of_exploration": 84.46,
+      "exploration_hours": 26,
+      "flights": {
+        "total_price": 1719,
+        "outbound": {
+          "departure_time": "8:10",
+          "arrival_time": "20:00",
+          "duration": "11h 50m",
+          "airline_names": [],
+          "price": 813,
+          "stops": "2 stops · Budapest, Belgrade"
+        },
+        "return": {
+          "departure_time": "09:30",
+          "arrival_time": "17:30",
+          "duration": "8h",
+          "airline_names": [],
+          "price": 906,
+          "stops": "1 stop · Athens"
+        }
+      },
+      "accommodation": {
+        "name": "Simple self contained room",
+        "price_per_night": 159,
+        "rating": "New",
+        "link": "https://www.airbnb.com/rooms/1438940897276146565?adults=2&check_in=2025-06-24&check_out=2025-06-27&search_mode=regular_search&category_tag=Tag%3A8678&photo_id=2205034679&source_impression_id=p3_1750256406_P3NJ4gXV-LtMuUa7&previous_page_section_name=1000&federated_search_id=82b45b01-4c1a-4a95-91f6-f4d043dae3d7",
+        "calculated_total_price": 477
+      }
+    },
+    {
+      "destination": "Ljubljana",
+      "outbound_date": "2025-06-24",
+      "return_date": "2025-06-29",
+      "total_cost": 2535,
+      "cost_per_hour_of_exploration": 40.4,
+      "exploration_hours": 62.75,
+      "flights": {
+        "total_price": 1465,
+        "outbound": {
+          "departure_time": "11:30",
+          "arrival_time": "20:00",
+          "duration": "8h 30m",
+          "airline_names": [
+            "Ryanair"
+          ],
+          "price": 810,
+          "stops": "1 stop · Airport change · Paris"
+        },
+        "return": {
+          "departure_time": "20:45",
+          "arrival_time": "11:10+1",
+          "duration": "14h 25m",
+          "airline_names": [],
+          "price": 655,
+          "stops": "3 stops · Belgrade, Tirana, Rome"
+        }
+      },
+      "accommodation": {
+        "name": "Rooms In Downtown Of Ljubljana",
+        "price_per_night": 214,
+        "rating": "4.57 (21)",
+        "link": "https://www.airbnb.com/rooms/1294914811693674948?adults=2&check_in=2025-06-24&check_out=2025-06-29&search_mode=regular_search&category_tag=Tag%3A8678&photo_id=2034721936&source_impression_id=p3_1750256131_P3N_5i-J7Mw3MZ3W&previous_page_section_name=1000&federated_search_id=c2662767-cbbb-4bdd-9008-165178887829",
+        "calculated_total_price": 1070
+      }
+    },
+    {
+      "destination": "Ljubljana",
+      "outbound_date": "2025-06-26",
+      "return_date": "2025-07-01",
+      "total_cost": 2797,
+      "cost_per_hour_of_exploration": 42.7,
+      "exploration_hours": 65.5,
+      "flights": {
+        "total_price": 1727,
+        "outbound": {
+          "departure_time": "06:30",
+          "arrival_time": "16:15",
+          "duration": "9h 45m",
+          "airline_names": [
+            "Ryanair"
+          ],
+          "price": 1210,
+          "stops": "2 stops · Milan, Luxembourg"
+        },
+        "return": {
+          "departure_time": "20:45",
+          "arrival_time": "10:40+1",
+          "duration": "13h 55m",
+          "airline_names": [],
+          "price": 517,
+          "stops": "2 stops · Copenhagen, Gdańsk"
+        }
+      },
+      "accommodation": {
+        "name": "Rooms In Downtown Of Ljubljana",
+        "price_per_night": 214,
+        "rating": "4.22 (9)",
+        "link": "https://www.airbnb.com/rooms/1294925406222573165?adults=2&check_in=2025-06-26&check_out=2025-07-01&search_mode=regular_search&category_tag=Tag%3A8678&photo_id=2034733111&source_impression_id=p3_1750256081_P36RrAqmDSnUgQ2r&previous_page_section_name=1000&federated_search_id=77d4fbcf-a94b-441a-99d8-dfb4be2e0bd0",
+        "calculated_total_price": 1070
+      }
+    }
+  ],
+  "Lisbon": [
+    {
+      "destination": "Lisbon",
+      "outbound_date": "2025-06-30",
+      "return_date": "2025-07-02",
+      "total_cost": 1341,
+      "cost_per_hour_of_exploration": 49.07,
+      "exploration_hours": 27.33,
+      "flights": {
+        "total_price": 1035,
+        "outbound": {
+          "departure_time": "12:05",
+          "arrival_time": "15:25",
+          "duration": "4h 20m",
+          "airline_names": [],
+          "price": 559,
+          "stops": "Direct"
+        },
+        "return": {
+          "departure_time": "20:45",
+          "arrival_time": "08:50+1",
+          "duration": "11h 05m",
+          "airline_names": [
+            "Ryanair"
+          ],
+          "price": 476,
+          "stops": "1 stop · Airport change · Milan"
+        }
+      },
+      "accommodation": {
+        "name": "Almada Small double room",
+        "price_per_night": 153,
+        "rating": "4.8 (56)",
+        "link": "https://www.airbnb.com/rooms/1221768778093141019?adults=2&check_in=2025-06-30&check_out=2025-07-01&search_mode=regular_search&category_tag=Tag%3A8678&children=0&infants=0&pets=0&photo_id=1973761713&source_impression_id=p3_1750256772_P3qCtTX_CrTYU4r3&previous_page_section_name=1000&federated_search_id=5959f432-f6d2-451d-ae9e-8373ee9458d8",
+        "calculated_total_price": 306
+      }
+    },
+    {
+      "destination": "Lisbon",
+      "outbound_date": "2025-06-30",
+      "return_date": "2025-07-03",
+      "total_cost": 1530,
+      "cost_per_hour_of_exploration": 37.09,
+      "exploration_hours": 41.25,
+      "flights": {
+        "total_price": 1071,
+        "outbound": {
+          "departure_time": "12:05",
+          "arrival_time": "15:25",
+          "duration": "4h 20m",
+          "airline_names": [
+            "Ryanair"
+          ],
+          "price": 559,
+          "stops": "Direct"
+        },
+        "return": {
+          "departure_time": "21:40",
+          "arrival_time": "11:10+1",
+          "duration": "12h 30m",
+          "airline_names": [],
+          "price": 512,
+          "stops": "1 stop · Rome"
+        }
+      },
+      "accommodation": {
+        "name": "Almada Small double room",
+        "price_per_night": 153,
+        "rating": "4.8 (56)",
+        "link": "https://www.airbnb.com/rooms/1221768778093141019?adults=2&check_in=2025-06-29&check_out=2025-07-01&search_mode=regular_search&category_tag=Tag%3A8678&children=0&infants=0&pets=0&photo_id=1973761713&source_impression_id=p3_1750256822_P31FKPZ5dESEvM5p&previous_page_section_name=1000&federated_search_id=b437128d-346a-4636-b6df-fc370ebb0eb8",
+        "calculated_total_price": 459
+      }
+    },
+    {
+      "destination": "Lisbon",
+      "outbound_date": "2025-06-30",
+      "return_date": "2025-07-04",
+      "total_cost": 1993,
+      "cost_per_hour_of_exploration": 45.12,
+      "exploration_hours": 44.17,
+      "flights": {
+        "total_price": 1249,
+        "outbound": {
+          "departure_time": "12:05",
+          "arrival_time": "15:25",
+          "duration": "4h 20m",
+          "airline_names": [
+            "Ryanair"
+          ],
+          "price": 559,
+          "stops": "Direct"
+        },
+        "return": {
+          "departure_time": "11:35",
+          "arrival_time": "16:35",
+          "duration": "4h",
+          "airline_names": [],
+          "price": 690,
+          "stops": "1 stop · Paris"
+        }
+      },
+      "accommodation": {
+        "name": "Private bathroom - 20min of Lisbon Center",
+        "price_per_night": 186,
+        "rating": "4.67 (69)",
+        "link": "https://www.airbnb.com/rooms/979718783746466202?adults=2&check_in=2025-06-30&check_out=2025-07-04&search_mode=regular_search&category_tag=Tag%3A8678&photo_id=1793942957&source_impression_id=p3_1750256716_P3xqFaJfyC5M_lPz&previous_page_section_name=1000&federated_search_id=ea5face1-36a2-4a1f-b43e-c625442e521b",
+        "calculated_total_price": 744
+      }
+    }
+  ],
+  "Copenhagen": [
+    {
+      "destination": "Copenhagen",
+      "outbound_date": "2025-08-13",
+      "return_date": "2025-08-13",
+      "total_cost": 165,
+      "cost_per_hour_of_exploration": 15.83,
+      "exploration_hours": 10.42,
+      "flights": {
+        "total_price": 165,
+        "outbound": {
+          "departure_time": "18:15",
+          "arrival_time": "19:40",
+          "duration": "1h 25m",
+          "airline_names": [
+            "Ryanair"
+          ],
+          "price": 103,
+          "stops": "Direct"
+        },
+        "return": {
+          "departure_time": "20:05",
+          "arrival_time": "21:25",
+          "duration": "1h 20m",
+          "airline_names": [
+            "Ryanair"
+          ],
+          "price": 62,
+          "stops": "Direct"
+        }
+      },
+      "accommodation": {
+        "name": "N/A (Day Trip)",
+        "total_accommodation_cost": 0,
+        "link": "N/A",
+        "rating": "N/A"
+      }
+    }
+  ],
+  "Billund": [
+    {
+      "destination": "Billund",
+      "outbound_date": "2025-07-14",
+      "return_date": "2025-07-16",
+      "total_cost": 931,
+      "cost_per_hour_of_exploration": 38.39,
+      "exploration_hours": 24.25,
+      "flights": {
+        "total_price": 754,
+        "outbound": {
+          "departure_time": "08:00",
+          "arrival_time": "09:45",
+          "duration": "1h 45m",
+          "airline_names": [],
+          "price": 416,
+          "stops": "Direct"
+        },
+        "return": {
+          "departure_time": "09:10",
+          "arrival_time": "13:00",
+          "duration": "3h 50m",
+          "airline_names": [],
+          "price": 338,
+          "stops": "1 stop · Gdańsk"
+        }
+      },
+      "accommodation": {
+        "name": "Cozy room 15 km to Messecenter/ Herning",
+        "total_accommodation_cost": 177,
+        "rating": "4.96 (155)",
+        "link": "https://www.airbnb.com/rooms/49539167",
+        "checkin": "2025-06-25",
+        "checkout": "2025-06-27"
+      }
+    }
+  ]
+}
