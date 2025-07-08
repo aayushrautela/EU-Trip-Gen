@@ -1,6 +1,6 @@
 import json
 import time
-from playwright.sync_api import Page, Error
+from playwright.sync_api import Page, Error, TimeoutError as PlaywrightTimeoutError
 import random
 import re
 from datetime import datetime, timedelta
@@ -11,13 +11,13 @@ def extract_prices_from_calendar(page: Page) -> list:
     Directly scrapes the full date and price from the calendar view using
     stable data-test attributes.
     """
-    print("      - Directly parsing price data from calendar HTML...")
+    print("        - Directly parsing price data from calendar HTML...")
     daily_prices = []
     # Find all calendar day elements that are not disabled
     day_elements = page.locator('[data-test="CalendarDay"]').all()
     
     if not day_elements:
-        print("      - ❌ No active calendar day elements found.")
+        print("        - ❌ No active calendar day elements found.")
         return []
 
     for day_element in day_elements:
@@ -61,25 +61,30 @@ def get_daily_prices_from_graph(page: Page, origin: str, destination: str, start
 
     all_prices = {} # Use a dictionary to automatically handle duplicates
 
+    # --- MODIFICATION START ---
+    # Variable to store the last exception that occurred
+    last_exception = None
+    # --- MODIFICATION END ---
+
     for attempt in range(3):
         try:
             page.goto(initial_url, timeout=90000)
             cookie_wait = config['search_parameters']['cookie_wait_seconds']
             
-            if not page.context.storage_state().get("ran_once"):
-                try:
-                    page.get_by_role('button', name='Accept', exact=True).click(timeout=7000)
-                    time.sleep(cookie_wait)
-                    page.evaluate("() => window.localStorage.setItem('ran_once', 'true')")
-                except Error: pass
+            # This logic is simplified to just attempt a click.
+            try:
+                page.get_by_role('button', name='Accept', exact=True).click(timeout=7000)
+                time.sleep(cookie_wait)
+            except Error: pass
             
             print("      - Clicking date input to reveal price calendar...")
-            page.locator('[data-test="SearchFieldDateInput"]').click()
+            date_input = page.locator('[data-test="SearchFieldDateInput"]')
+            date_input.wait_for(state='visible', timeout=30000)
+            date_input.click()
 
-            # --- SIMPLIFIED LOGIC ---
-            # Wait for 5 seconds for prices to load.
-            print("      - Waiting 5 seconds for prices to load...")
-            time.sleep(5)
+            # Wait for calendar to be visible
+            page.locator('[data-test="CalendarDay"]').first.wait_for(state='visible', timeout=15000)
+            time.sleep(2) # Small extra wait for prices to populate
             
             # Loop to click "Next Month" if needed
             while True:
@@ -100,8 +105,7 @@ def get_daily_prices_from_graph(page: Page, origin: str, destination: str, start
                 else:
                     print("      - Required search period extends beyond visible calendar. Clicking next month...")
                     page.locator('[data-test="CalendarMoveNext"]').click()
-                    # Wait another 5 seconds for the next month to load
-                    time.sleep(5)
+                    time.sleep(3) # Wait for the next month to load
 
             # Convert the dictionary back to a list
             final_price_list = list(all_prices.values())
@@ -115,18 +119,28 @@ def get_daily_prices_from_graph(page: Page, origin: str, destination: str, start
 
         except Exception as e:
             print(f"--- Attempt {attempt + 1} FAILED for price graph. Error: {e}")
+            # --- MODIFICATION START ---
+            last_exception = e # Store the exception
+            # --- MODIFICATION END ---
             if attempt < 2: time.sleep(10)
 
+    # --- MODIFICATION START ---
+    # If the loop finishes without returning, it means all attempts failed.
+    # We now raise the last stored exception to fail the main script.
     print(f"--- All scraping attempts for price graph failed. ---")
-    return []
+    if last_exception:
+        raise last_exception
+    return [] # Return empty if there was no exception but also no success
+    # --- MODIFICATION END ---
 
-# This function still requires the AI as the flight card text is less structured.
+
 def get_detailed_flight_info(page, origin, destination, departure_date, client, config, log_func):
     """
     Scrapes detailed flight info, with retries and robust JSON parsing.
+    This function will now raise an error on failure.
     """
     url = f"https://www.kiwi.com/en/search/results/{origin}/{destination}/{departure_date}/no-return"
-    print(f"      - Scraping detailed flight info for: {departure_date}")
+    print(f"        - Scraping detailed flight info for: {departure_date}")
 
     try:
         page.goto(url, timeout=90000, wait_until="domcontentloaded")
@@ -147,8 +161,8 @@ def get_detailed_flight_info(page, origin, destination, departure_date, client, 
         combined_text = "\n\n---\n\n".join(text_snippets)
         if not combined_text: return []
 
-        model_name = config['api_settings']['models']['openrouter']['default'] # Example
-        print(f"        - Using model: {model_name}")
+        model_name = config['api_settings']['models']['openrouter']['default']
+        print(f"          - Using model: {model_name}")
 
         prompt = f"""
         Analyze the provided plain text (separated by '---') and return a clean JSON object. Do not include any other text.
@@ -164,9 +178,9 @@ def get_detailed_flight_info(page, origin, destination, departure_date, client, 
         TEXT:
         {combined_text}
         """
-
         log_func({"prompt_sent_to_api": prompt}, f"prompt_for_details_{departure_date}")
-
+        
+        last_api_exception = None
         for attempt in range(3):
             raw_content = ""
             try:
@@ -193,10 +207,19 @@ def get_detailed_flight_info(page, origin, destination, departure_date, client, 
                     raise ValueError("No valid JSON object could be extracted from the model's response.")
 
             except Exception as e:
-                print(f"      - ❌ Attempt {attempt + 1} failed. Error: {e}")
+                print(f"        - ❌ Attempt {attempt + 1} failed. Error: {e}")
+                last_api_exception = e # Store the last API/parsing error
                 log_func({"error": str(e), "raw_response": raw_content}, f"detailed_flights_parsing_error_{origin}_{destination}")
                 if attempt < 2: time.sleep(3)
+        
+        # --- MODIFICATION ---
+        # If all API attempts fail, raise the last error
+        if last_api_exception:
+            raise last_api_exception
         return []
+
     except Exception as e:
-        print(f"      - ❌ ERROR: Could not get detailed flight info for {departure_date}. Error: {e}")
-        return []
+        # --- MODIFICATION ---
+        # Any failure in this main block (including Playwright timeouts) will be raised
+        print(f"        - ❌ ERROR: Could not get detailed flight info for {departure_date}. Error: {e}")
+        raise e
