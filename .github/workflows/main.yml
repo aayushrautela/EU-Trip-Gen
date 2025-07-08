@@ -82,9 +82,18 @@ jobs:
       - name: Run the trip scraper
         run: python main_controller.py
 
-      # 7. Upload the results as a downloadable artifact
-      - name: Upload results
+      # 7. Upload the results as a downloadable artifact (only on success)
+      - name: Upload results on Success
+        if: success()
         uses: actions/upload-artifact@v4
         with:
           name: trip-results
           path: final_trips.json
+
+      # 8. Upload a screenshot for debugging (only on failure)
+      - name: Upload Error Screenshot on Failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: error-screenshot
+          path: error_screenshot.png
