@@ -10,7 +10,7 @@ httpx==0.28.1
 idna==3.10
 jiter==0.10.0
 openai==1.93.0
-playwright-stealth
+playwright-stealth==1.0.6
 pydantic==2.11.7
 pydantic_core==2.33.2
 pyee==13.0.0
