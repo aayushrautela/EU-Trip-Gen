@@ -1,7 +1,6 @@
 # Trip Explorer Optimizer
 
-A Python-based travel planning tool that identifies affordable short trips across Europe by scraping flight and accommodation data, then ranking travel options based on **cost per hour of exploration**.
-
+EU-Trip-Gen is an AI-assisted automated travel optimization system designed to scrape and aggregate flight data from Kiwi.com and accommodation listings from Airbnb. It employs Large Language Models to parse unstructured data into structured formats and uses Python-based scalable automation for efficient data collection and processing. The system ranks potential trips by cost-effectiveness and exploration hours, delivering optimized travel itineraries based on configurable search parameters.
 ## Features
 
 * Scrapes **flight price calendars** and **detailed flight options** from Kiwi.com
