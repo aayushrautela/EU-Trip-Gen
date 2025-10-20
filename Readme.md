@@ -1,5 +1,5 @@
 # Trip Explorer Optimizer
-
+###[Deprecated] This project is no longer maintained due to Kiwi.com's enhanced anti-bot protections, which prevent reliable automated scraping.
 EU-Trip-Gen is an AI-assisted automated travel optimization system designed to scrape and aggregate flight data from Kiwi.com and accommodation listings from Airbnb. It employs Large Language Models to parse unstructured data into structured formats and uses Python-based scalable automation for efficient data collection and processing. The system ranks potential trips by cost-effectiveness and exploration hours, delivering optimized travel itineraries based on configurable search parameters.
 ## Features
 
